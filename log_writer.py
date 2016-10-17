@@ -25,7 +25,7 @@ class LogWriter(object):
 	@staticmethod
 	def count_o(text):
 		#4
-		pass
+		return text.count('o') + text.count('O')
 
 	def get_first_part(self):
 		#5
@@ -57,7 +57,7 @@ class LogWriter(object):
 	@staticmethod
 	def computation(x):
 		#12
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
