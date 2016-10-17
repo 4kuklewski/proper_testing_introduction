@@ -23,16 +23,22 @@ class LogWriter(object):
 	@staticmethod
 	def insert_data_in_text(text, data):
 		#3
+		index = text.find('list') + 4
+		text = text[:index] +' (' +str(data)+ ') ' + text[index:]
+		return text
 		pass
 
 	@staticmethod
 	def count_o(text):
 		#4
-		pass
+		return text.count('o') + text.count('O')
 
 	def get_first_part(self):
-		#5
-		pass
+		self.head_text=self.head_text+"_________\n After change: \n"
+		tmp=self.head_text
+		tmp=tmp+self.insert_data_in_text(self.head_text,self.list_data)
+		tmp=tmp+str(self.count_o(self.head_text))
+		return tmp
 
 	@staticmethod
 	def what_is_added_the_meaning_of_life(add):
@@ -42,6 +48,10 @@ class LogWriter(object):
 	@staticmethod
 	def what_is_your_quest(quest="holy grail"):
 		#8
+		if quest=="holy grail":
+			return "To seek the holy grail"
+		else:
+			return "To seek the " + quest
 		pass
 
 	@staticmethod
@@ -57,7 +67,7 @@ class LogWriter(object):
 		is_even=o_count_is_even(self.o_count)
 		if is_even:
 		  return what_is_added_the_meaning_of_life(self.o_count)
-		if is_even==false:
+		if not is_even:
 		  words = string.split(self.head_text)
 		  return what_is_your_quest(words[1])
 		if self.o_count>7:
@@ -68,7 +78,7 @@ class LogWriter(object):
 	@staticmethod
 	def computation(x):
 		#12
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
