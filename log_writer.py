@@ -57,7 +57,7 @@ class LogWriter(object):
 		is_even=o_count_is_even(self.o_count)
 		if is_even:
 		  return what_is_added_the_meaning_of_life(self.o_count)
-		if !is_even:
+		if is_even==false:
 		  words = string.split(self.head_text)
 		  return what_is_your_quest(words[1])
 		if self.o_count>7:
