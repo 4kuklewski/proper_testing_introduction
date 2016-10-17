@@ -43,8 +43,10 @@ class LogWriter(object):
 
 	@staticmethod
 	def get_second_word(text):
-		#9
-		pass
+	 	splitText = text.split()
+		if len(splitText) < 2:
+			return ''
+		return splitText[1]
 
 	def o_count_is_even(self):
 		#10
