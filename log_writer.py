@@ -5,6 +5,9 @@ class LogWriter(object):
 
 	def __init__(self, list_data, head_text):
 		#7
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
 		pass
 
 	@staticmethod
@@ -65,6 +68,7 @@ class LogWriter(object):
 
 	def combining_method(self):
 		#14
+		return str(self.get_first_part()) + "0 O 0 O 0 O 0 O 0 O 0 O" + str(self.computation(self.get_second_part()))
 		pass
 
 	def __str__(self):
