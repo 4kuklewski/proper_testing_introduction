@@ -47,7 +47,7 @@ class LogWriter(object):
 		pass
 
 	def o_count_is_even(self):
-		return o_count%2 == 0
+		return self.o_count%2 == 0
 
 	def get_movie_reference(self):
 		#11
