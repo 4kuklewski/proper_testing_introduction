@@ -34,6 +34,10 @@ class LogWriter(object):
 	@staticmethod
 	def what_is_added_the_meaning_of_life(add):
 		#6
+		if add is None:
+		      return 42;
+		else:
+		      return math.sqrt(42) + add
 		pass
 
 	@staticmethod
