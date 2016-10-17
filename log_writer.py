@@ -28,7 +28,7 @@ class LogWriter(object):
 	@staticmethod
 	def count_o(text):
 		#4
-		pass
+		return text.count('o') + text.count('O')
 
 	def get_first_part(self):
 		#5
@@ -58,13 +58,21 @@ class LogWriter(object):
 		pass
 
 	def get_movie_reference(self):
-		#11
-		pass
+		is_even=o_count_is_even(self.o_count)
+		if is_even:
+		  return what_is_added_the_meaning_of_life(self.o_count)
+		if !is_even:
+		  words = string.split(self.head_text)
+		  return what_is_your_quest(words[1])
+		if self.o_count>7:
+		  self.head_text.append(" ")
+		  return what_is_your_quest()
+		  
 
 	@staticmethod
 	def computation(x):
 		#12
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
