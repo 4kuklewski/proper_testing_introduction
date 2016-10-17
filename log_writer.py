@@ -18,7 +18,7 @@ class LogWriter(object):
 	@staticmethod
 	def avg_every_second_element(data):
 		#2
-		pass
+		return float(sum([x for x in data[1::2]])/(len(data)/2))
 
 	@staticmethod
 	def insert_data_in_text(text, data):
