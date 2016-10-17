@@ -62,7 +62,7 @@ class LogWriter(object):
 	def get_second_part(self, computation=None):
 		#13
 		movie_reference = self.get_movie_reference()
-		if movie_reference or computation:
+		if movie_reference == None or computation == None:
 		    return None
 		return movie_reference+'\n'+computation
 
