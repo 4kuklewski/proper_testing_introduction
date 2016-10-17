@@ -68,7 +68,7 @@ class LogWriter(object):
 
 	def combining_method(self):
 		#14
-		return str(self.get_first_part()) + "0 O 0 O 0 O 0 O 0 O 0 O" + str(self.computatio
+		return str(self.get_first_part()) + "0 O 0 O 0 O 0 O 0 O 0 O" + str(self.computation(self.get_second_part()))
 		pass
 
 	def __str__(self):
