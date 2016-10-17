@@ -56,7 +56,7 @@ class LogWriter(object):
 	def o_count_is_even(self):
 		if self.o_count == None:
 			return False
-		else
+		else:
 			return self.o_count%2 == 0
 
 	def get_movie_reference(self):
