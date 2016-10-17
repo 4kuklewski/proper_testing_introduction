@@ -39,6 +39,10 @@ class LogWriter(object):
 	@staticmethod
 	def what_is_your_quest(quest="holy grail"):
 		#8
+		if quest=="holy grail":
+			return "To seek the holy grail"
+		else:
+			return "To seek the " + quest
 		pass
 
 	@staticmethod
