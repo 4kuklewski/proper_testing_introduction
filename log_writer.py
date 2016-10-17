@@ -5,6 +5,9 @@ class LogWriter(object):
 
 	def __init__(self, list_data, head_text):
 		#7
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
 		pass
 
 	@staticmethod
@@ -15,21 +18,26 @@ class LogWriter(object):
 	@staticmethod
 	def avg_every_second_element(data):
 		#2
-		pass
+		return float(sum([x for x in data[1::2]])/(len(data)/2))
 
 	@staticmethod
 	def insert_data_in_text(text, data):
 		#3
+		index = text.find('list') + 4
+		text = text[:index] +' (' +str(data)+ ') ' + text[index:]
+		return text
 		pass
 
 	@staticmethod
 	def count_o(text):
 		#4
-		pass
+		return text.count('o') + text.count('O')
 
 	def get_first_part(self):
-		#5
-		pass
+		self.head_text=self.head_text+"_________\n After change: \n"
+		tmp=self.head_text
+		tmp=tmp+self.insert_data_in_text(self.head_text,self.list_data)
+		return tmp,self.count_o(self.head_text)
 
 	@staticmethod
 	def what_is_added_the_meaning_of_life(add):
@@ -39,6 +47,10 @@ class LogWriter(object):
 	@staticmethod
 	def what_is_your_quest(quest="holy grail"):
 		#8
+		if quest=="holy grail":
+			return "To seek the holy grail"
+		else:
+			return "To seek the " + quest
 		pass
 
 	@staticmethod
@@ -51,13 +63,21 @@ class LogWriter(object):
 		pass
 
 	def get_movie_reference(self):
-		#11
-		pass
+		is_even=o_count_is_even(self.o_count)
+		if is_even:
+		  return what_is_added_the_meaning_of_life(self.o_count)
+		if not is_even:
+		  words = string.split(self.head_text)
+		  return what_is_your_quest(words[1])
+		if self.o_count>7:
+		  self.head_text.append(" ")
+		  return what_is_your_quest()
+		  
 
 	@staticmethod
 	def computation(x):
 		#12
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
@@ -68,6 +88,7 @@ class LogWriter(object):
 
 	def combining_method(self):
 		#14
+		return str(self.get_first_part()) + "0 O 0 O 0 O 0 O 0 O 0 O" + str(self.computation(self.get_second_part()))
 		pass
 
 	def __str__(self):
