@@ -10,7 +10,7 @@ class LogWriter(object):
 	@staticmethod
 	def get_every_second_element(data):
 		#1
-		pass
+		return data[1::2]
 
 	@staticmethod
 	def avg_every_second_element(data):
@@ -61,7 +61,7 @@ class LogWriter(object):
 
 	def get_second_part(self, computation=None):
 		#13
-		pass
+		return self.get_movie_reference()+'\n'+computation
 
 	def combining_method(self):
 		#14
