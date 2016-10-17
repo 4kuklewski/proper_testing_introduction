@@ -20,6 +20,9 @@ class LogWriter(object):
 	@staticmethod
 	def insert_data_in_text(text, data):
 		#3
+		index = text.find('list') + 4
+		text = text[:index] +' (' +str(data)+ ') ' + text[index:]
+		return text
 		pass
 
 	@staticmethod
