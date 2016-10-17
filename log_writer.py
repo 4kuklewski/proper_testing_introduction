@@ -28,8 +28,11 @@ class LogWriter(object):
 		pass
 
 	def get_first_part(self):
-		#5
-		pass
+		self.head_text=self.head_text+"_________\n After change: \n"
+		tmp=self.head_text
+		tmp=tmp+self.insert_data_in_text(self.head_text,self.list_data)
+		tmp=tmp+str(self.count_o(self.head_text))
+		return tmp
 
 	@staticmethod
 	def what_is_added_the_meaning_of_life(add):
