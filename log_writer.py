@@ -64,7 +64,7 @@ class LogWriter(object):
 		movie_reference = self.get_movie_reference()
 		if movie_reference is None or computation is None:
 		    return None
-		return movie_reference+'\n'+computation
+		return movie_reference+'\n'+computation(47)
 
 	def combining_method(self):
 		#14
